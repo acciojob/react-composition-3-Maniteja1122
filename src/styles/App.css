@@ -1,1 +1,35 @@
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px;  /* Ensures a gap between tooltips (adjust as needed) */
+  margin-top: 90px; /* Adds a gap between tooltips vertically (adjust as needed) */
+}
 
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: red; /* Tooltip background color */
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+
+  /* Position the tooltip above the element with a gap (increase bottom to create a gap) */
+  bottom: 140%;  /* Adjusted for gap, increase/decrease as per preference */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+  
+  opacity: 0;
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Show the tooltip when hovered */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
