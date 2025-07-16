@@ -9,7 +9,6 @@ const Tooltip = ({ text, children }) => {
       className="tooltip"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
-      aria-label={text} 
     >
       {children}
       <span
